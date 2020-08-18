@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "836277653571",
+    "firebase_url": "https://notification-demo-f28a4.firebaseio.com",
+    "project_id": "notification-demo-f28a4",
+    "storage_bucket": "notification-demo-f28a4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836277653571:android:fc28cbebc10a2eeff384f6",
+        "android_client_info": {
+          "package_name": "com.chingari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836277653571-40kmo7d7c0dht9bv83bolot84gjatus7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJgUXksNi73ijNT1FCR_H2RMZzAs0BXnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836277653571-40kmo7d7c0dht9bv83bolot84gjatus7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

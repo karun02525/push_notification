@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PushNotification</string>
+    <string name="default_notification_channel_id" translatable="false">f127515</string>
+    <string name="default_notification_channel_name" translatable="true">Weather</string>
+
+
+</resources>
