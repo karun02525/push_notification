@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,7 +31,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String id = intent.getStringExtra("Id");
 
-        tv.setText("Main=> onResume " + id);
+        if(id !=null) {
+            Toast.makeText(getBaseContext(), "Your ID: " + id, Toast.LENGTH_SHORT).show();
+            tv.setText("Main=> onResume " + id);
+        }
+
         Log.d("Main=> onResume", "Id: " + id);
     }
 }
