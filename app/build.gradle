@@ -35,11 +35,10 @@ dependencies {
 
 
     //Push Noti
-    implementation 'com.google.firebase:firebase-messaging:20.1.7'
-    implementation 'com.google.firebase:firebase-iid:20.1.7'
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'
+    implementation 'com.google.firebase:firebase-iid:20.2.4'
 
     implementation 'android.arch.work:work-runtime:1.0.1'
-
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

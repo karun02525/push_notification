@@ -1,27 +1,36 @@
 package com.chingari;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView tv;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        tv=findViewById(R.id.tv);
 
-        String id = getIntent().getStringExtra("Id");
-        Log.d("Main=>", "id: " + id);
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onResume() {
         super.onResume();
-        String id = getIntent().getStringExtra("Id");
-        Log.d("Main=>", "Id: " + id);
+
+        Intent intent = getIntent();
+        String id = intent.getStringExtra("Id");
+
+        tv.setText("Main=> onResume " + id);
+        Log.d("Main=> onResume", "Id: " + id);
     }
 }

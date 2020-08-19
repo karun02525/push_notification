@@ -39,7 +39,8 @@ public class FCMService extends FirebaseMessagingService {
         String mess = remoteMessage.getData().get("message");
         String id = remoteMessage.getData().get("id");
 
-        sendNotification(title, mess, id);
+        Log.d(TAG, "Message Notification Data : " + title +" "+ mess + " "+ id);
+        sendNotification("title", "mess", id);
 
         if (/* Check if data needs to be processed by long running job */ true) {
             // For long-running tasks (10 seconds or more) use WorkManager.
@@ -74,8 +75,8 @@ public class FCMService extends FirebaseMessagingService {
 
     private void sendNotification(String title, String messageBody, String id) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("Id",id);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.putExtra("Id", id);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent, PendingIntent.FLAG_ONE_SHOT);
 
         String channelId = getString(R.string.default_notification_channel_id);
